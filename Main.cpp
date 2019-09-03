@@ -19,8 +19,6 @@
 //#include <time.h>
 //#include <windows.h>
 
-
-//don't need to include Polygon because Polygon.h is included in the derived classes
 #include "Polygon/Triangle.h"
 #include "Polygon/Square.h"
 #include "Polygon/Pentagon.h"
@@ -89,34 +87,7 @@ int main(int argc, char* args[]){
 	shared_ptr<Woman> woman = std::make_shared<Woman>(0,0,100);
 
 	objects.emplace_back(square);
-	
 
-	/*code for the military review image:
-	 set width to 1100 before compilation*/
-	/*
-	for(int i = 0; i<20; i++){
-		shared_ptr<Triangle> iso_triangle_1 = std::make_shared<Triangle>(-548 + (i*58),10,22,28);
-		objects.emplace_back(iso_triangle_1);}
-	for(int i = 0; i<5; i++){
-		shared_ptr<Triangle> triangle = std::make_shared<Triangle>(-500 + (i*80),-14,34);
-		objects.emplace_back(triangle);}
-	for(int i = 0; i<3; i++){
-		shared_ptr<Square> sq = std::make_shared<Square>(100+(i*130),-21,38);
-		objects.emplace_back(sq);}
-	shared_ptr<Pentagon> pt = std::make_shared<Pentagon>(650, -33, 44);
-	shared_ptr<Hexagon> hx = std::make_shared<Hexagon>(-650, -33, 44);
-	objects.emplace_back(pt);
-	objects.emplace_back(hx);
-	for(int i = 0; i<3; i++){
-		shared_ptr<Triangle> gun = std::make_shared<Triangle>(45+(i*126), -21, 21);
-		gun->rotate(90);
-		objects.emplace_back(gun);}
-	*/
-	/*ends*/
-
-	//vector<std::shared_ptr<Circle> > circles;
-	//shared_ptr<Circle> circley = std::make_shared<Circle>();
-	//circles.emplace_back(circley);
 
 	vector<std::shared_ptr<Sphere> > spheres;
 	shared_ptr<Sphere> sphere = std::make_shared<Sphere>(0,0,0,100);
@@ -129,11 +100,7 @@ int main(int argc, char* args[]){
 
 	int fogHue = 255;
 	int fogStrength = 50;
-	//military image FS was 78
-	//int fogStrength = 78;
 
-	//int ptog = -1;
-	//int htog = 1;
 
 	//main loop
 	while(running){
